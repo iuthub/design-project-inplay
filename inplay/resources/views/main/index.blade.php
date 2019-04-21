@@ -3,6 +3,7 @@
 	<link rel="stylesheet" type="text/css" href="css/fullpage.css" />
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/mainPage.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 <body>
 
@@ -64,7 +65,45 @@
             </section>
         </div>
     </div>
-    <div class="section" id="section2"></div>
+    <div class="section" id="section2">
+        <div class="team-section">
+            <div class="inner-width">
+                <h1>Команда</h1>
+                <div class="pers">
+                    <div class="pe">
+                        <img src="css/img/5.png" alt="">
+                        <div class="p-name"> Full name</div>
+                        <div class="p-desc"> Designer</div>
+                        <div class="p-sm">
+                            <a href="#"> <i class="fab fa-facebook-f"></i></a>
+                            <a href="#"> <i class="fab fa-twitter"></i></a>
+                            <a href="#"> <i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="pe">
+                        <img src="css/img/5.png" alt="">
+                        <div class="p-name"> Full name</div>
+                        <div class="p-desc"> Developer</div>
+                        <div class="p-sm">
+                            <a href="#"> <i class="fab fa-facebook-f"></i></a>
+                            <a href="#"> <i class="fab fa-twitter"></i></a>
+                            <a href="#"> <i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="pe">
+                        <img src="css/img/5.png" alt="">
+                        <div class="p-name"> Full name</div>
+                        <div class="p-desc"> Front-end</div>
+                        <div class="p-sm">
+                            <a href="#"> <i class="fab fa-facebook-f"></i></a>
+                            <a href="#"> <i class="fab fa-twitter"></i></a>
+                            <a href="#"> <i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script type="text/javascript" src="js/fullpage.js"></script>
