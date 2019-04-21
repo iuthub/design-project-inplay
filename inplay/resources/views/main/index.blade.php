@@ -9,7 +9,10 @@
 <div id="header">        
     <nav class="navbar navbar-dark bg-dark">
         InPlay
-        <button type="button" class="btn btn-success float-right">Войти</button>
+        <div class="float-right">
+            <a href="login" class="btn btn-success">Войти</a>
+            <a href="register" class="btn btn-primary">Регистрация</a>
+        </div>
     </nav>
 </div>
 
