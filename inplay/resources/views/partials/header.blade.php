@@ -21,11 +21,13 @@
                   <li class="nav-item">
                     <a class="nav-link" href="#">Contact</a>
                   </li>
+            @else   
+              <div class="float-right">
+                <a href="login" class="btn btn-success">Войти</a>
+                <a href="register" class="btn btn-primary">Регистрация</a>
+              </div>    
             @endif
-            <div class="float-right">
-                    <a href="login" class="btn btn-success">Войти</a>
-                    <a href="register" class="btn btn-primary">Регистрация</a>
-            </div>
+            
         </ul>
       </div>
     </div>
