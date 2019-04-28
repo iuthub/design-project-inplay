@@ -11,14 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('main/index');
-});
+Route::get('/', 'MainController@index');
+
+Route::get('/games', 'MainController@games');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/games', function () {
-    return view('main/games');
-});
+
