@@ -15,6 +15,11 @@ Route::get('/', 'MainController@index');
 
 Route::get('/games', 'MainController@games');
 
+Route::get('/games/{id}', [
+    'as' => 'main.gameInfo', 'uses' => 'MainController@getGame'
+]);
+
+
 Auth::routes();
 
 Route::get('logout', 'Auth\LoginController@logout');

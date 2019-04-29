@@ -26,5 +26,10 @@ class MainController extends Controller
         // }
     }
 
+    public function getGame($id){
+        $prod = DB::table('products')->find($id);
+        return view('main.gameInfo',['product'=>$prod]);
+    }
+
 
 }
