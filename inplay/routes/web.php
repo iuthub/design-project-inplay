@@ -11,10 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('main/index');
-});
+Route::get('/', 'MainController@index');
+
+Route::get('/games', 'MainController@games');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('logout', 'Auth\LoginController@logout');
+
+Route::prefix('admin')->middleware('auth')->group(function () {
+    Route::get('/', 'Admin\IndexController@index');
+    Route::post('/save', 'Admin\IndexController@save');
+});
+
