@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Auth;
 
 class MainController extends Controller
@@ -13,7 +14,9 @@ class MainController extends Controller
 
     public function games(){
 
-        return view('main/games');
+        $prod = DB::table('products')->get();
+        
+        return view('main.games',  ['products' => $prod]);
 
         //@TODO Добавить эту функцию!!
         // if(Auth::check()){
