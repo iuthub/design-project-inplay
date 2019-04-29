@@ -21,10 +21,11 @@ class IndexController extends Controller
         $prod->date = request('date');
         $prod->description = request('description');
         $prod->imageSource = request('imageSource');
+        $prod->deleted = false;
        
         $prod->save();
 
-        return redirect('/admin');
+        return redirect('/games');
  
     }
 

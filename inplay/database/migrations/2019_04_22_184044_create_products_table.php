@@ -21,6 +21,7 @@ class CreateProductsTable extends Migration
             $table->double('price');
             $table->text('imageSource');
             $table->date('date');
+            $table->boolean('deleted');
         });
     }
 

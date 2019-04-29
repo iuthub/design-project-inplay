@@ -13,8 +13,8 @@ class MainController extends Controller
     }
 
     public function games(){
-
-        $prod = DB::table('products')->get();
+       
+        $prod = DB::table('products')->where('deleted', false)->get();
         
         return view('main.games',  ['products' => $prod]);
 
