@@ -14,10 +14,12 @@
       <li class="list-group-item">{{$product->price}}</li>
       <li class="list-group-item">{{$product->genre}}</li>
       <li class="list-group-item">{{$product->date}}</li>
+      <li class="list-group-item">{{$product->id}}</li>
     </ul>
     <div class="card-body">
       <a href="#" class="card-link">Edit</a>
       <a href="#" class="card-link">Delete</a>
+      <a href="{{route('admin.keys',['id' => $product->id])}}" class="card-link">Add key</a>
     </div>
   </div>
 
