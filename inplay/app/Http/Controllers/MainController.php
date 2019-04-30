@@ -31,5 +31,11 @@ class MainController extends Controller
         return view('main.gameInfo',['product'=>$prod]);
     }
 
+    public function getProfile($id){
+        //$id = Auth::id();
+        $profile = DB::table('users')->find($id);
+        return view('main.profile',['user'=>$profile]);
+    }
+
 
 }
