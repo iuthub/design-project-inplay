@@ -14,16 +14,13 @@ class MainController extends Controller
 
     public function games(){
        
-        $prod = DB::table('products')->where('deleted', false)->get();
-        
-        return view('main.games',  ['products' => $prod]);
+        $prod = DB::table('products')->where('deleted', '=', 0)->orderBy('created_at', 'desc')->paginate(3);
 
-        //@TODO Добавить эту функцию!!
-        // if(Auth::check()){
-        // return view('main/games');
-        // }else{
-        //     return redirect('/');
-        // }
+        if(Auth::check()){
+            return view('main.games',  ['products' => $prod]);
+        }else{
+            return redirect('/');
+        }
     }
 
     public function getGame($id){
@@ -32,7 +29,7 @@ class MainController extends Controller
     }
 
     public function getProfile($id){
-        //$id = Auth::id();
+        
         $profile = DB::table('users')->find($id);
         return view('main.profile',['user'=>$profile]);
     }

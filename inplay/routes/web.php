@@ -31,5 +31,9 @@ Route::get('logout', 'Auth\LoginController@logout');
 Route::prefix('admin')->middleware('auth')->group(function () {
     Route::get('/', 'Admin\IndexController@index');
     Route::post('/save', 'Admin\IndexController@save');
+    Route::get('/addKey/{id}', [
+    'as' => 'admin.keys', 'uses' => 'Admin\IndexController@addKey'
+    ]);
+    Route::post('/keysave', 'Admin\IndexController@keysave');
 });
 

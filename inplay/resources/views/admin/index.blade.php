@@ -14,8 +14,21 @@
         <input type="text" class="form-control" id="name" name="name"  placeholder="Enter name">
     </div>
     <div class="form-group">
-        <label for="janre">Janre</label>
-        <input type="text" class="form-control" id="janre" name="janre"  placeholder="Enter janre">
+        <label for="genre">Genre</label>
+        <select class="form-control" id="genre" name="genre">
+          <option>Action</option>
+          <option>Adventure</option>
+          <option>Fighting</option>
+          <option>Platform</option>
+          <option>Racing</option>
+          <option>Role-playing</option>
+          <option>Shooter</option>
+          <option>Simulation</option>
+          <option>Sports</option>
+          <option>Strategy</option>
+          <option>Misc</option>
+
+        </select>
     </div>
     <div class="form-group">
         <label for="price">Price</label>
