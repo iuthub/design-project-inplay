@@ -19,6 +19,10 @@ Route::get('/games/{id}', [
     'as' => 'main.gameInfo', 'uses' => 'MainController@getGame'
 ]);
 
+Route::get('/profile/{id}', [
+    'as' => 'main.profile', 'uses' => 'MainController@getProfile'
+]);
+
 
 Auth::routes();
 
