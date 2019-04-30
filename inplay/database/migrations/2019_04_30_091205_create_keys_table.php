@@ -19,6 +19,8 @@ class CreateKeysTable extends Migration
             $table->string('user_id')->references('id')->on('users')->nullable();
             
             $table->string('product_id')->references('id')->on('products');
+
+            $table->datetime('date')->nullable();;
             
         });
     }
