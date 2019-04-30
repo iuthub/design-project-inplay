@@ -12,7 +12,7 @@
     </div>
     <ul class="list-group list-group-flush">
       <li class="list-group-item">{{$product->price}}</li>
-      <li class="list-group-item">{{$product->janre}}</li>
+      <li class="list-group-item">{{$product->genre}}</li>
       <li class="list-group-item">{{$product->date}}</li>
     </ul>
     <div class="card-body">

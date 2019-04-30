@@ -14,16 +14,13 @@ class MainController extends Controller
 
     public function games(){
        
-        $prod = DB::table('products')->where('deleted', '=', 0)->orderBy('created_at', 'desc')->paginate(6);
-        
-        return view('main.games',  ['products' => $prod]);
+        $prod = DB::table('products')->where('deleted', '=', 0)->orderBy('created_at', 'desc')->paginate(2);
 
-        //@TODO Добавить эту функцию!!
-        // if(Auth::check()){
-        // return view('main/games');
-        // }else{
-        //     return redirect('/');
-        // }
+        if(Auth::check()){
+            return view('main.games',  ['products' => $prod]);
+        }else{
+            return redirect('/');
+        }
     }
 
     public function getGame($id){

@@ -17,12 +17,13 @@ class IndexController extends Controller
         $prod = new Product();
         $prod->id =  guid();
         $prod->name = request('name');
-        $prod->janre = request('janre');
+        $prod->genre = request('genre');
         $prod->price = request('price');
         $prod->date = request('date');
         $prod->description = request('description');
         $prod->imageSource = request('imageSource');
         $prod->deleted = false;
+        $prod->created_at = now();
        
         $prod->save();
 
