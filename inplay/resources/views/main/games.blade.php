@@ -1,5 +1,6 @@
 @extends('layouts.main')
 
+
 @section('content')
     
 @include('partials.header')
@@ -65,7 +66,7 @@
                 <a href="{{route('main.gameInfo',['id' => $product->id])}}">{{$product->name}}</a>
                 </h4>
                 <h5>${{$product->price}}</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                <p class="card-text">{{Guid::create()}} </p>
               </div>
               <div class="card-footer">
                 <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>

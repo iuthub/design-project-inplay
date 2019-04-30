@@ -41,4 +41,15 @@
       0 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
     ),
   ),
+  'sudiptpa/guid' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Sujip\\Guid\\GuidServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'Guid' => 'Sujip\\Guid\\Facades\\Guid',
+    ),
+  ),
 );
