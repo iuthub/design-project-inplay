@@ -16,7 +16,7 @@
         <div class="list-group">
           <a href="#" class="list-group-item">Category 1</a>
           <a href="#" class="list-group-item">Category 2</a>
-          <a href="{{route('main.profile',['id' => Auth::id()])}}" class="list-group-item">Profile</a>
+          <a href="{{route('main.profile',['id' => Auth::user()->id])}}" class="list-group-item">Profile</a>
           @if (Auth::check())
           <a href="/admin" class="list-group-item">Admin</a>
           @endif
@@ -75,6 +75,7 @@
           </div>
           @endforeach
           
+          {{ $products->links() }}
 
         </div>
         <!-- /.row -->

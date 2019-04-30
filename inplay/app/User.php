@@ -34,6 +34,11 @@ class User extends Authenticatable
      * @var array
      */
     protected $casts = [
+        'id' => 'string',
         'email_verified_at' => 'datetime',
     ];
+
+    public function getUserId(){
+        return $this->id;
+    }
 }

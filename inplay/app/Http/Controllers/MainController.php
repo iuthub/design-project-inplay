@@ -14,7 +14,7 @@ class MainController extends Controller
 
     public function games(){
        
-        $prod = DB::table('products')->where('deleted', false)->get();
+        $prod = DB::table('products')->where('deleted', '=', 0)->orderBy('created_at', 'desc')->paginate(6);
         
         return view('main.games',  ['products' => $prod]);
 
@@ -32,7 +32,7 @@ class MainController extends Controller
     }
 
     public function getProfile($id){
-        //$id = Auth::id();
+        
         $profile = DB::table('users')->find($id);
         return view('main.profile',['user'=>$profile]);
     }
