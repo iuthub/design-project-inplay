@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Product;
+
 class IndexController extends Controller
 {
     public function index(){
@@ -14,7 +15,7 @@ class IndexController extends Controller
     public function save(){
 
         $prod = new Product();
- 
+        $prod->id =  guid();
         $prod->name = request('name');
         $prod->janre = request('janre');
         $prod->price = request('price');
