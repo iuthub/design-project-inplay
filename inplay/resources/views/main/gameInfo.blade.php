@@ -15,6 +15,7 @@
       <li class="list-group-item">{{$product->genre}}</li>
       <li class="list-group-item">{{$product->date}}</li>
       <li class="list-group-item">{{$product->id}}</li>
+      <li class="list-group-item"> <a href="{{route('main.buy',['id' => $product->id])}}" class="btn btn-success">Buy</a></li>
     </ul>
     <div class="card-body">
       <a href="#" class="card-link">Edit</a>

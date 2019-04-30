@@ -22,6 +22,9 @@ Route::get('/games/{id}', [
 Route::get('/profile/{id}', [
     'as' => 'main.profile', 'uses' => 'MainController@getProfile'
 ]);
+Route::get('/buy/{id}', [
+    'as' => 'main.buy', 'uses' => 'MainController@buy'
+]);
 
 
 Auth::routes();
@@ -35,5 +38,6 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     'as' => 'admin.keys', 'uses' => 'Admin\IndexController@addKey'
     ]);
     Route::post('/keysave', 'Admin\IndexController@keysave');
+    
 });
 

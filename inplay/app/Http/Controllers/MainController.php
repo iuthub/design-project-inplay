@@ -34,5 +34,10 @@ class MainController extends Controller
         return view('main.profile',['user'=>$profile]);
     }
 
+    public function buy($id){
+        $key = DB::table('keys')->where('product_id',$id)->where('user_id',null)->limit(1)->update(['user_id' => Auth::id()]);
+        return redirect('/games');
+    }
+
 
 }
