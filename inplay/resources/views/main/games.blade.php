@@ -15,7 +15,7 @@
         <h1 class="my-4">Shop Name</h1>
         <div class="list-group">
           <a href="#" class="list-group-item">Category 1</a>
-          <a href="#" class="list-group-item">Category 2</a>
+          <a href="#top" class="list-group-item">Category 2</a>
           <a href="{{route('main.profile',['id' => Auth::id()])}}" class="list-group-item">Profile</a>
           @if (Auth::check())
           <a href="/admin" class="list-group-item">Admin</a>
@@ -54,30 +54,76 @@
           </a>
         </div>
 
-        <div class="row">
-            @foreach ($products as $product)
+        
+          
+          
+          <div class="card">
+            <div class="card-header">
+              Action
+            </div>
+            <div class="card-body">
+              
+              <p class="card-text">
+                  <div class="row">
+                @foreach ($products as $product)
                 
-           
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                <a href="{{route('main.gameInfo',['id' => $product->id])}}">{{$product->name}}</a>
-                </h4>
-                <h5>${{$product->price}}</h5>
-                <p class="card-text">{{Guid::create()}} </p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-              </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                  <div class="card h-100">
+                    <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                    <div class="card-body">
+                      <h4 class="card-title">
+                      <a href="{{route('main.gameInfo',['id' => $product->id])}}">{{$product->name}}</a>
+                      </h4>
+                      <h5>${{$product->price}}</h5>
+                      <p class="card-text">{{Guid::create()}} </p>
+                    </div>
+                    <div class="card-footer">
+                      <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                    </div>
+                  </div>
+                </div>
+                @endforeach
+                  </div>
+              </p>
+              
             </div>
           </div>
-          @endforeach
-          
-          {{ $products->links() }}
 
-        </div>
+<br>
+          <div class="card">
+              <div class="card-header">
+                Sport
+              </div>
+              <div class="card-body">
+                
+                <p class="card-text">
+                    <div class="row">
+                  @foreach ($products as $product)
+                  
+                  <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                      <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                      <div class="card-body">
+                        <h4 class="card-title">
+                        <a href="{{route('main.gameInfo',['id' => $product->id])}}">{{$product->name}}</a>
+                        </h4>
+                        <h5>${{$product->price}}</h5>
+                        <p class="card-text">{{Guid::create()}} </p>
+                      </div>
+                      <div class="card-footer">
+                        <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                      </div>
+                    </div>
+                  </div>
+                  @endforeach
+                    </div>
+                </p>
+                
+              </div>
+            </div>
+
+          
+        
         <!-- /.row -->
 
       </div>

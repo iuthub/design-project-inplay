@@ -14,7 +14,7 @@ class MainController extends Controller
 
     public function games(){
        
-        $prod = DB::table('products')->where('deleted', '=', 0)->orderBy('created_at', 'desc')->paginate(2);
+        $prod = DB::table('products')->where('deleted', '=', 0)->orderBy('created_at', 'desc')->paginate(3);
 
         if(Auth::check()){
             return view('main.games',  ['products' => $prod]);
