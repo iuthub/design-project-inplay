@@ -7,7 +7,7 @@ $(document).ready(function() {
       loop: true,
       responsive:{
         200:{
-            items:3
+            items:4
         }
     }
     })
