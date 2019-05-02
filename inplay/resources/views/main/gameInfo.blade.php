@@ -2,10 +2,10 @@
 
 @section('content')
     
-{{-- @include('partials.header') --}}
+@include('partials.header')
 <main>
 <div class="card" style="width: 18rem; margin-top: 55px;">
-    <img class="card-img-top" src="..." alt="Card image cap">
+    <img class="card-img-top" src="{{asset('css/img/index'.$product->id.'.jpg')}}" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">{{$product->name}}</h5>
       <p class="card-text">{{$product->description}}</p>

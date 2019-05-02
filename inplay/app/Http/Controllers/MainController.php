@@ -15,17 +15,17 @@ class MainController extends Controller
 
     public function games(){
 
-        $action = DB::table('products')->where('deleted', '=', 0)->where('genre', '=', 'action')->orderBy('created_at', 'desc')->paginate(3);
-        $adventure = DB::table('products')->where('deleted', '=', 0)->where('genre', '=', 'adventure')->orderBy('created_at', 'desc')->paginate(3);
-        $fighting = DB::table('products')->where('deleted', '=', 0)->where('genre', '=', 'fighting')->orderBy('created_at', 'desc')->paginate(3);
-        $platform = DB::table('products')->where('deleted', '=', 0)->where('genre', '=', 'platform')->orderBy('created_at', 'desc')->paginate(3);
-        $racing = DB::table('products')->where('deleted', '=', 0)->where('genre', '=', 'racing')->orderBy('created_at', 'desc')->paginate(3);
-        $role_playing = DB::table('products')->where('deleted', '=', 0)->where('genre', '=', 'role-playing')->orderBy('created_at', 'desc')->paginate(3);
-        $shooter = DB::table('products')->where('deleted', '=', 0)->where('genre', '=', 'shooter')->orderBy('created_at', 'desc')->paginate(3);
-        $simulation = DB::table('products')->where('deleted', '=', 0)->where('genre', '=', 'simulation')->orderBy('created_at', 'desc')->paginate(3);
-        $sports = DB::table('products')->where('deleted', '=', 0)->where('genre', '=', 'sports')->orderBy('created_at', 'desc')->paginate(3);
-        $strategy = DB::table('products')->where('deleted', '=', 0)->where('genre', '=', 'strategy')->orderBy('created_at', 'desc')->paginate(3);
-        $misc = DB::table('products')->where('deleted', '=', 0)->where('genre', '=', 'misc')->orderBy('created_at', 'desc')->paginate(3);
+        $action = DB::table('products')->where('deleted', '=', 0)->where('genre', '=', 'action')->orderBy('created_at', 'desc')->paginate(12);
+        $adventure = DB::table('products')->where('deleted', '=', 0)->where('genre', '=', 'adventure')->orderBy('created_at', 'desc')->paginate(12);
+        $fighting = DB::table('products')->where('deleted', '=', 0)->where('genre', '=', 'fighting')->orderBy('created_at', 'desc')->paginate(12);
+        $platform = DB::table('products')->where('deleted', '=', 0)->where('genre', '=', 'platform')->orderBy('created_at', 'desc')->paginate(12);
+        $racing = DB::table('products')->where('deleted', '=', 0)->where('genre', '=', 'racing')->orderBy('created_at', 'desc')->paginate(12);
+        $role_playing = DB::table('products')->where('deleted', '=', 0)->where('genre', '=', 'role-playing')->orderBy('created_at', 'desc')->paginate(12);
+        $shooter = DB::table('products')->where('deleted', '=', 0)->where('genre', '=', 'shooter')->orderBy('created_at', 'desc')->paginate(12);
+        $simulation = DB::table('products')->where('deleted', '=', 0)->where('genre', '=', 'simulation')->orderBy('created_at', 'desc')->paginate(12);
+        $sports = DB::table('products')->where('deleted', '=', 0)->where('genre', '=', 'sports')->orderBy('created_at', 'desc')->paginate(12);
+        $strategy = DB::table('products')->where('deleted', '=', 0)->where('genre', '=', 'strategy')->orderBy('created_at', 'desc')->paginate(12);
+        $misc = DB::table('products')->where('deleted', '=', 0)->where('genre', '=', 'misc')->orderBy('created_at', 'desc')->paginate(12);
         
 
         if(Auth::check()){
@@ -40,6 +40,7 @@ class MainController extends Controller
                                         'sports' => $sports,
                                         'strategys' => $strategy,
                                         'miscs' => $misc,
+                                        
                                         ]);
         }else{
             return redirect('/');

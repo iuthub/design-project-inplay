@@ -19,7 +19,6 @@ class CreateProductsTable extends Migration
             $table->text('genre');
             $table->text('description');
             $table->double('price');
-            $table->text('imageSource');
             $table->date('date');
             $table->boolean('deleted');
             $table->timestamps('');

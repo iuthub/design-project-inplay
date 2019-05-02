@@ -30,18 +30,7 @@
                 <a href="register" class="btn btn-primary">Регистрация</a>
               </div>    
             @endif
-            
-        </ul>
+         </ul>
       </div>
     </div>
   </nav>
-
-  <aside>
-    
-    <div class="list-group">
-      <a href="{{route('main.profile',['id' => Auth::id()])}}" class="list-group-item">Profile</a>
-      @if (Auth::check())
-      <a href="/admin" class="list-group-item">Admin</a>
-      @endif
-    </div>
-  </aside>
