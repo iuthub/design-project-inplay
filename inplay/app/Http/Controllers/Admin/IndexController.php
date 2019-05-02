@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use App\Product;
 use App\Key;
+use Auth;
 class IndexController extends Controller
 {
     public function index(){
@@ -49,5 +50,7 @@ class IndexController extends Controller
         return redirect('/games');
  
     }
+
+    
     
 }

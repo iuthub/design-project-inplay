@@ -21,4 +21,28 @@
     </div>
   </div>
 
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Date</th>
+        <th scope="col">Game</th>
+        <th scope="col">Key</th>
+      </tr>
+    </thead>
+    <tbody>
+      @foreach ($games as $key=>$game)
+     
+      <tr>
+        <th scope="row">{{++$key}}</th>
+        <td>{{$game->date}}</td>
+        <td>{{$game->name}}</td>
+        <td>{{$game->id}}</td>
+        
+      </tr>
+     
+      @endforeach
+    </tbody>
+  </table>
 @endsection

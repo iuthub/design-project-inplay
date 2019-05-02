@@ -2,8 +2,8 @@
 
 @section('content')
     
-@include('partials.header')
-
+{{-- @include('partials.header') --}}
+<main>
 <div class="card" style="width: 18rem; margin-top: 55px;">
     <img class="card-img-top" src="..." alt="Card image cap">
     <div class="card-body">
@@ -15,6 +15,7 @@
       <li class="list-group-item">{{$product->genre}}</li>
       <li class="list-group-item">{{$product->date}}</li>
       <li class="list-group-item">{{$product->id}}</li>
+      <li class="list-group-item"> <a href="{{route('main.buy',['id' => $product->id])}}" class="btn btn-success">Buy</a></li>
     </ul>
     <div class="card-body">
       <a href="#" class="card-link">Edit</a>
@@ -22,6 +23,10 @@
       <a href="{{route('admin.keys',['id' => $product->id])}}" class="card-link">Add key</a>
     </div>
   </div>
+
+ 
+
+ 
 
 
 @endsection
