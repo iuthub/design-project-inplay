@@ -2,8 +2,8 @@
 
 @section('content')
     
-@include('partials.header')
-
+{{-- @include('partials.header') --}}
+<main>
 <div class="card" style="width: 18rem; margin-top: 55px;">
     <img class="card-img-top" src="..." alt="Card image cap">
     <div class="card-body">
@@ -23,6 +23,10 @@
       <a href="{{route('admin.keys',['id' => $product->id])}}" class="card-link">Add key</a>
     </div>
   </div>
+
+ 
+
+ 
 
 
 @endsection
