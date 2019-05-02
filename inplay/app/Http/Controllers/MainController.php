@@ -14,11 +14,33 @@ class MainController extends Controller
     }
 
     public function games(){
-       
-        $prod = DB::table('products')->where('deleted', '=', 0)->orderBy('created_at', 'desc')->paginate(3);
+
+        $action = DB::table('products')->where('deleted', '=', 0)->where('genre', '=', 'action')->orderBy('created_at', 'desc')->paginate(3);
+        $adventure = DB::table('products')->where('deleted', '=', 0)->where('genre', '=', 'adventure')->orderBy('created_at', 'desc')->paginate(3);
+        $fighting = DB::table('products')->where('deleted', '=', 0)->where('genre', '=', 'fighting')->orderBy('created_at', 'desc')->paginate(3);
+        $platform = DB::table('products')->where('deleted', '=', 0)->where('genre', '=', 'platform')->orderBy('created_at', 'desc')->paginate(3);
+        $racing = DB::table('products')->where('deleted', '=', 0)->where('genre', '=', 'racing')->orderBy('created_at', 'desc')->paginate(3);
+        $role_playing = DB::table('products')->where('deleted', '=', 0)->where('genre', '=', 'role-playing')->orderBy('created_at', 'desc')->paginate(3);
+        $shooter = DB::table('products')->where('deleted', '=', 0)->where('genre', '=', 'shooter')->orderBy('created_at', 'desc')->paginate(3);
+        $simulation = DB::table('products')->where('deleted', '=', 0)->where('genre', '=', 'simulation')->orderBy('created_at', 'desc')->paginate(3);
+        $sports = DB::table('products')->where('deleted', '=', 0)->where('genre', '=', 'sports')->orderBy('created_at', 'desc')->paginate(3);
+        $strategy = DB::table('products')->where('deleted', '=', 0)->where('genre', '=', 'strategy')->orderBy('created_at', 'desc')->paginate(3);
+        $misc = DB::table('products')->where('deleted', '=', 0)->where('genre', '=', 'misc')->orderBy('created_at', 'desc')->paginate(3);
+        
 
         if(Auth::check()){
-            return view('main.games',  ['products' => $prod]);
+            return view('main.games',  ['actions' => $action,
+                                        'adventures' => $adventure,
+                                        'fightings' => $fighting,
+                                        'platforms' => $platform,
+                                        'racings' => $racing,
+                                        'role_playings' => $role_playing,
+                                        'shooters' => $shooter,
+                                        'simulations' => $simulation,
+                                        'sports' => $sports,
+                                        'strategys' => $strategy,
+                                        'miscs' => $misc,
+                                        ]);
         }else{
             return redirect('/');
         }
