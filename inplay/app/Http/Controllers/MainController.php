@@ -40,8 +40,7 @@ class MainController extends Controller
                                         'sports' => $sports,
                                         'strategys' => $strategy,
                                         'miscs' => $misc,
-                                        
-                                        ]);
+                                         ]);
         }else{
             return redirect('/');
         }

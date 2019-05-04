@@ -5,7 +5,7 @@
 @include('partials.header')
 <br>
 
-
+<div class="colorContainer">
 <div class="card" style="width: 18rem; margin-left:50%">
     <img class="card-img-top" src="..." alt="Card image cap">
     <div class="card-body">
@@ -45,4 +45,10 @@
       @endforeach
     </tbody>
   </table>
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; InPlay 2019</p>
+    </div>
+  </footer>
+</div>
 @endsection
