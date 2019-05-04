@@ -5,8 +5,8 @@
 @include('partials.header')
 <br>
 
-
-<div class="card" style="width: 18rem;">
+<div class="colorContainer">
+<div class="card" style="width: 18rem; margin-left:50%">
     <img class="card-img-top" src="..." alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">{{$user->name}}</h5>
@@ -22,7 +22,7 @@
   </div>
 
 
-  <table class="table">
+  <table class="table col-9" style="margin-left:25%">
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -45,4 +45,10 @@
       @endforeach
     </tbody>
   </table>
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; InPlay 2019</p>
+    </div>
+  </footer>
+</div>
 @endsection

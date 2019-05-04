@@ -2,29 +2,23 @@
 
 @section('content')
     
-{{-- @include('partials.header') --}}
+@include('partials.header')
 <main>
-<div class="card" style="width: 18rem; margin-top: 55px;">
-    <img class="card-img-top" src="..." alt="Card image cap">
+
+
+  <div class="card mb-3">
+    <img class="card-img-top" src="{{asset('css/img/index'.$product->id.'.jpg')}}" alt="Card image cap">
     <div class="card-body">
-      <h5 class="card-title">{{$product->name}}</h5>
-      <p class="card-text">{{$product->description}}</p>
-    </div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">{{$product->price}}</li>
-      <li class="list-group-item">{{$product->genre}}</li>
-      <li class="list-group-item">{{$product->date}}</li>
-      <li class="list-group-item">{{$product->id}}</li>
-      <li class="list-group-item"> <a href="{{route('main.buy',['id' => $product->id])}}" class="btn btn-success">Buy</a></li>
-    </ul>
-    <div class="card-body">
-      <a href="#" class="card-link">Edit</a>
-      <a href="#" class="card-link">Delete</a>
-      <a href="{{route('admin.keys',['id' => $product->id])}}" class="card-link">Add key</a>
+      <h3 class="card-title">{{$product->name}}</h3>
+      <p class="card-text">Description: {{$product->description}}</p>
+      <p class="card-text">Date: {{$product->date}} </p>
+      <p class="card-text">Genre: {{$product->genre}} </p>
+    <hr>
+      <a href="{{route('main.buy',['id' => $product->id])}}" class="btn btn-success float-right ml-1">Buy</a>
+      <a href="{{route('admin.keys',['id' => $product->id])}}" class="btn btn-success card-link float-right">Add key</a>
+    
     </div>
   </div>
-
- 
 
  
 

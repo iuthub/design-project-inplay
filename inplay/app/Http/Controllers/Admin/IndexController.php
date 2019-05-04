@@ -14,19 +14,28 @@ class IndexController extends Controller
         return view('admin.index');
     }
 
-    public function save(){
+    public function save(Request $request){
+
+        $img = \Image::make($request->file('imageUploader'));
+        $img_path= public_path('css\img\index' .request('id'). '.jpg');
+        $img->resize(900,350);
+        $img->save($img_path);
+        
+        
 
         $prod = new Product();
-        $prod->id =  guid();
+        $prod->id =  request('id');
+        
         $prod->name = request('name');
         $prod->genre = request('genre');
         $prod->price = request('price');
         $prod->date = request('date');
         $prod->description = request('description');
-        $prod->imageSource = request('imageSource');
         $prod->deleted = false;
         $prod->created_at = now();
        
+        
+        
         $prod->save();
 
         return redirect('/games');

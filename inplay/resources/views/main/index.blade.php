@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('content')
 <div id="header">        
-  @include('partials.header')
+  @include('partials.main-header')
 </div>
 
 <div id="fullpage">

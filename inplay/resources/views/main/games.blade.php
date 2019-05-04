@@ -5,34 +5,9 @@
     
 @include('partials.header')
 
-<div class=" main-container">
+<div class="main-container">
 <main>
- <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
-   <ol class="carousel-indicators">
-     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-   </ol>
-   <div class="carousel-inner" role="listbox">
-     <div class="carousel-item active">
-       <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="First slide">
-     </div>
-     <div class="carousel-item">
-       <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Second slide">
-     </div>
-     <div class="carousel-item">
-       <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Third slide">
-     </div>
-   </div>
-   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-     <span class="sr-only">Previous</span>
-   </a>
-   <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-     <span class="sr-only">Next</span>
-   </a>
- </div>
+  
         
   @if ($actions->count()>0)
   <div class="card">
@@ -45,8 +20,8 @@
               @foreach ($actions as $action)
                 <div class="item">
                  <div class="card1">
-                  <img src="css/img/2.jpg" alt="">
-                   <div class="container1">
+                 <img src="{{asset('css/img/index'.$action->id.'.jpg')}}" alt="">
+                  <div class="container1">
                    <h4>{{$action->name}}</h4>
                    <p>{{$action->description}}</p>
                    </div>
@@ -72,7 +47,7 @@
               @foreach ($adventures as $adventure)
                 <div class="item">
                   <div class="card1">
-                    <img src="css/img/2.jpg" alt="">
+                    <img src="{{asset('css/img/index'.$adventure->id.'.jpg')}}" alt="">
                      <div class="container1">
                      <h4>{{$adventure->name}}</h4>
                      <p>{{$adventure->description}}</p>
@@ -99,7 +74,7 @@
               @foreach ($fightings as $fighting)
                 <div class="item">
                   <div class="card1">
-                    <img src="css/img/2.jpg" alt="">
+                    <img src="{{asset('css/img/index'.$fighting->id.'.jpg')}}" alt="">
                      <div class="container1">
                      <h4>{{$fighting->name}}</h4>
                      <p>{{$fighting->description}}</p>
@@ -126,7 +101,7 @@
               @foreach ($platforms as $platform)
                 <div class="item">
                   <div class="card1">
-                    <img src="css/img/2.jpg" alt="">
+                    <img src="{{asset('css/img/index'.$platform->id.'.jpg')}}" alt="">
                      <div class="container1">
                      <h4>{{$platform->name}}</h4>
                      <p>{{$platform->description}}</p>
@@ -153,7 +128,7 @@
               @foreach ($racings as $racing)
                 <div class="item">
                   <div class="card1">
-                    <img src="css/img/2.jpg" alt="">
+                    <img src="{{asset('css/img/index'.$racing->id.'.jpg')}}" alt="">
                      <div class="container1">
                      <h4>{{$racing->name}}</h4>
                      <p>{{$racing->description}}</p>
@@ -180,7 +155,7 @@
               @foreach ($role_playings as $role_playing)
                 <div class="item">
                   <div class="card1">
-                    <img src="css/img/2.jpg" alt="">
+                    <img src="{{asset('css/img/index'.$role_playing->id.'.jpg')}}" alt="">
                      <div class="container1">
                      <h4>{{$role_playing->name}}</h4>
                      <p>{{$role_playing->description}}</p>
@@ -207,7 +182,7 @@
               @foreach ($shooters as $shooter)
                 <div class="item">
                   <div class="card1">
-                    <img src="css/img/2.jpg" alt="">
+                    <img src="{{asset('css/img/index'.$shooter->id.'.jpg')}}" alt="">
                      <div class="container1">
                      <h4>{{$shooter->name}}</h4>
                      <p>{{$shooter->description}}</p>
@@ -234,7 +209,7 @@
               @foreach ($simulations as $simulation)
                 <div class="item">
                   <div class="card1">
-                    <img src="css/img/2.jpg" alt="">
+                    <img src="{{asset('css/img/index'.$simulation->id.'.jpg')}}" alt="">
                      <div class="container1">
                      <h4>{{$simulation->name}}</h4>
                      <p>{{$simulation->description}}</p>
@@ -261,7 +236,7 @@
               @foreach ($sports as $sport)
                 <div class="item">
                   <div class="card1">
-                    <img src="css/img/2.jpg" alt="">
+                    <img src="{{asset('css/img/index'.$sport->id.'.jpg')}}" alt="">
                      <div class="container1">
                      <h4>{{$sport->name}}</h4>
                      <p>{{$sport->description}}</p>
@@ -288,7 +263,7 @@
               @foreach ($strategys as $strategy)
                 <div class="item">
                   <div class="card1">
-                    <img src="css/img/2.jpg" alt="">
+                    <img src="{{asset('css/img/index'.$strategy->id.'.jpg')}}" alt="">
                      <div class="container1">
                      <h4>{{$strategy->name}}</h4>
                      <p>{{$strategy->description}}</p>
@@ -315,7 +290,7 @@
               @foreach ($miscs as $misc)
                 <div class="item">
                   <div class="card1">
-                    <img src="css/img/2.jpg" alt="">
+                    <img src="{{asset('css/img/index'.$misc->id.'.jpg')}}" alt="">
                      <div class="container1">
                      <h4>{{$misc->name}}</h4>
                      <p>{{$misc->description}}</p>

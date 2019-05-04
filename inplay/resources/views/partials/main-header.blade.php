@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg h3 fixed-top navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg h3 fixed-top">
     <div class="container">
       <a class="navbar-brand" href="/games">
         <img src="{{asset('css/img/6.png')}}" alt="">
@@ -23,6 +23,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="#">Contact</a>
               </li>
+
               <li class="nav-item">
                 <a href="logout" class="btn btn-danger fas fa-sign-out-alt"></a>
               </li>
@@ -32,18 +33,7 @@
                 <a href="register" class="btn btn-primary">Регистрация</a>
               </div>    
             @endif
-            
-        </ul>
+         </ul>
       </div>
     </div>
   </nav>
-
-  <aside>
-    
-    <div class="list-group">
-      <a href="{{route('main.profile',['id' => Auth::id()])}}" class="list-group-item">Profile</a>
-      @if (Auth::check())
-      <a href="/admin" class="list-group-item">Admin</a>
-      @endif
-    </div>
-  </aside>

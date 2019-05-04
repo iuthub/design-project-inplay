@@ -4,20 +4,20 @@
     background-size: cover;
 }
 #section2{
-    background: -webkit-gradient(linear, top left, bottom left, from(#4BBFC3), to(#969AC6));
-    background: -webkit-linear-gradient(#4BBFC3, #969AC6);
-    background: linear-gradient(#4BBFC3,#969AC6);
+    background: -webkit-gradient(linear, top left, bottom left, from(#7C3481), to(#EB63F0));
+    background: -webkit-linear-gradient(#923488, #EB63F0);
+    background: linear-gradient(#923488,#EB63F0);
 }
 #slide1{
-    background: -webkit-gradient(linear, top left, bottom left, from(#64c1a6), to(#4BBFC3));
-    background: -webkit-linear-gradient(#64c1a6, #4BBFC3);
-    background: linear-gradient(#64c1a6,#4BBFC3);
+    background: -webkit-gradient(linear, top left, bottom left, from(#723882), to(#923488));
+    background: -webkit-linear-gradient(#723882,#923488);
+    background: linear-gradient(#723882,#923488);
     
 }
 #slide2{
-    background: -webkit-gradient(linear, top left, bottom left, from(#64c1a6), to(#4BBFC3));
-    background: -webkit-linear-gradient(#64c1a6, #4BBFC3);
-    background: linear-gradient(#64c1a6,#4BBFC3);
+    background: -webkit-gradient(linear, top left, bottom left, from(#723882), to(#923488));
+    background: -webkit-linear-gradient(#723882, #923488);
+    background: linear-gradient(#723882,#923488);
 }
 .card-img-bottom {
 color: #fff;
@@ -25,6 +25,7 @@ height: 20rem;
 background: url('img/3.jpg') center no-repeat;
 background-size: cover;
 }
+
 
 #header{
     position:fixed;
@@ -103,15 +104,22 @@ background-size: cover;
 .main-container {
     display: flex;
     justify-content: space-between;
+    background: -webkit-gradient(linear, top left, bottom left, from(#723882), to(#923488));
+    background: -webkit-linear-gradient(#723882,#923488);
+    background: linear-gradient(#723882,#923488);
+}
+.colorContainer{
+    background: -webkit-gradient(linear, top left, bottom left, from(#723882), to(#923488));
+    background: -webkit-linear-gradient(#723882,#923488);
+    background: linear-gradient(#723882,#923488);
 }
 aside {
     position: fixed;
     height: 100vh;
-    padding: 60px 10px 0 10px;
-    background: #343a40;
+    padding: 100px 10px 0 10px;
     width: 300px;
 }
-
+ 
 main {
     padding-top: 100px;;
     padding-bottom: 20px;

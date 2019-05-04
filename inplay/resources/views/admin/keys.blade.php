@@ -7,7 +7,7 @@
 <br>
 <br>
 <br>
-<form action="/admin/keysave" method="POST">
+<form action="/admin/keysave" method="POST" class="col-9" style="margin-left: 25%">
     @csrf
    
     
