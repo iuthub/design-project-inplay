@@ -7,6 +7,8 @@
 <br>
 <br>
 <br>
+<div class="colorContainer">
+<main>
 <form action="/admin/keysave" method="POST" class="col-9" style="margin-left: 25%">
     @csrf
    <div class="form-group">
@@ -18,4 +20,6 @@
     </div>
       <button type="submit" class="btn btn-primary">Submit</button>
   </form>
+</main>
+</div>
 @endsection
