@@ -34,21 +34,18 @@
       </div>
     </div>
   </nav>
-
-  <aside>
-    
-    <div class="list-group">
+<aside>
+   <div class="list-group">
       <a href="" class="list-group-item">Action</a>
       <a href="" class="list-group-item">Adventure</a>
       <a href="" class="list-group-item">Fighting</a>
-      <a href="" class="list-group-item">Platform</a>
+      <a href="" class="list-group-item">Shooter</a>
       <a href="" class="list-group-item">Racing</a>
       <a href="" class="list-group-item">Role-playing</a>
-      <a href="" class="list-group-item">Shooter</a>
+      <a href="" class="list-group-item">Platform</a>
       <a href="" class="list-group-item">Simulation</a>
       <a href="" class="list-group-item">Sports</a>
       <a href="" class="list-group-item">Strategy</a>
       <a href="" class="list-group-item">Misc</a>
-      
     </div>
   </aside>

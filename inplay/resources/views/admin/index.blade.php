@@ -28,7 +28,6 @@
           <option>Sports</option>
           <option>Strategy</option>
           <option>Misc</option>
-
         </select>
     </div>
     <div class="form-group text-white">
@@ -44,8 +43,7 @@
         <textarea class="form-control" id="description" name="description" rows="3"></textarea>
     </div>
     <div class="form-group">
-        
-        <input type="file" class="form-control-file" id="imageUploader" name="imageUploader">
+         <input type="file" class="form-control-file" id="imageUploader" name="imageUploader">
     </div>
       <button type="submit" class="btn btn-primary">Submit</button>
   </form>
