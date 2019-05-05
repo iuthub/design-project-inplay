@@ -13,23 +13,10 @@
 
 Route::get('/', 'MainController@index');
 
-Route::get('/games', 'MainController@games');
 
-Route::get('/games/{id}', [
-    'as' => 'main.gameInfo', 'uses' => 'MainController@getGame'
-]);
-
-Route::get('/profile/{id}', [
-    'as' => 'main.profile', 'uses' => 'MainController@getProfile'
-]);
 Route::get('/buy/{id}', [
     'as' => 'main.buy', 'uses' => 'MainController@buy'
 ]);
-
-
-Auth::routes();
-
-Route::get('logout', 'Auth\LoginController@logout');
 
 Route::prefix('admin')->middleware('auth')->group(function () {
     Route::get('/', 'Admin\IndexController@index');
@@ -37,7 +24,22 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     Route::get('/addKey/{id}', [
     'as' => 'admin.keys', 'uses' => 'Admin\IndexController@addKey'
     ]);
-    Route::post('/keysave', 'Admin\IndexController@keysave');
-    
+    Route::post('/keysave', 'Admin\IndexController@keysave'); 
 });
+
+
+Route::get('/games', 'MainController@games');
+
+
+Route::get('/games/{id}', [
+    'as' => 'main.gameInfo', 'uses' => 'MainController@getGame'
+]);
+
+
+Route::get('/profile/{id}', [
+    'as' => 'main.profile', 'uses' => 'MainController@getProfile'
+]);
+Auth::routes();
+Route::get('logout', 'Auth\LoginController@logout');
+
 
