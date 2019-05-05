@@ -3,6 +3,8 @@
 @section('content')
     
 @include('partials.header')
+
+<div class="colorContainer ">
 <main>
 
 
@@ -22,7 +24,8 @@
     </div>
   </div>
 
- 
+</main>
+</div>
 
 
 @endsection

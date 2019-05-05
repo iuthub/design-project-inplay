@@ -4,25 +4,20 @@
     
 @include('partials.header')
 <br>
-
-<div class="colorContainer">
-<div class="card" style="width: 18rem; margin-left:50%">
-    <img class="card-img-top" src="..." alt="Card image cap">
+<div class="colorContainer ">
+<main>
+<div class="card " style="width: 18rem;">
+    <img class="card-img-top" src="{{asset('css/img/5.png')}}" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">{{$user->name}}</h5>
       
     </div>
     <ul class="list-group list-group-flush">
       <li class="list-group-item">{{$user->email}}</li>
-      
-    <div class="card-body">
-      <a href="#" class="card-link">Edit</a>
-      <a href="#" class="card-link">Delete</a>
-    </div>
   </div>
 
-
-  <table class="table col-9" style="margin-left:25%">
+<br>
+  <table class="table col-9 bg-white" >
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -45,10 +40,7 @@
       @endforeach
     </tbody>
   </table>
-  <footer class="py-5 bg-dark">
-    <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; InPlay 2019</p>
-    </div>
-  </footer>
+</main>
 </div>
+
 @endsection

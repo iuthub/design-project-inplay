@@ -10,21 +10,17 @@
         <ul class="navbar-nav ml-auto">
             @if (Auth::check())
               <li class="nav-item active">
-                <a class="nav-link" href="#">Home
-                  <span class="sr-only">(current)</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
-              </li>
-
-              <li class="nav-item">
+                  <a class="nav-link" href="/">Home
+                    <span class="sr-only">(current)</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('main.profile',['id' => Auth::id()])}}">Profile</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/admin">Admin</a>
+                  </li>
+             <li class="nav-item">
                 <a href="logout" class="btn btn-danger fas fa-sign-out-alt"></a>
               </li>
             @else   

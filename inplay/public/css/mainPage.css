@@ -128,7 +128,7 @@ main {
     width: calc(100% - 300px);
     display: flex;
     flex-direction: column;
-    margin-left: auto;; 
+    margin-left: auto;
 }
 
 footer {
