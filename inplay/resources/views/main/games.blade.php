@@ -20,7 +20,7 @@
               @foreach ($actions as $action)
                 <div class="item">
                  <div class="card1">
-                 <img src="{{asset('css/img/index'.$action->id.'.jpg')}}" alt="">
+                 <img src="{{asset('storage/images/'.$action->id.'.jpg')}}" alt="">
                   <div class="container1">
                    <h4>{{$action->name}}</h4>
                    <p>{{$action->description}}</p>
@@ -47,7 +47,7 @@
               @foreach ($adventures as $adventure)
                 <div class="item">
                   <div class="card1">
-                    <img src="{{asset('css/img/index'.$adventure->id.'.jpg')}}" alt="">
+                    <img src="{{asset('storage/images/'.$adventure->id.'.jpg')}}" alt="">
                      <div class="container1">
                      <h4>{{$adventure->name}}</h4>
                      <p>{{$adventure->description}}</p>
@@ -74,7 +74,7 @@
               @foreach ($fightings as $fighting)
                 <div class="item">
                   <div class="card1">
-                    <img src="{{asset('css/img/index'.$fighting->id.'.jpg')}}" alt="">
+                    <img src="{{asset('storage/images/'.$fighting->id.'.jpg')}}" alt="">
                      <div class="container1">
                      <h4>{{$fighting->name}}</h4>
                      <p>{{$fighting->description}}</p>
@@ -101,7 +101,7 @@
               @foreach ($platforms as $platform)
                 <div class="item">
                   <div class="card1">
-                    <img src="{{asset('css/img/index'.$platform->id.'.jpg')}}" alt="">
+                    <img src="{{asset('storage/images/'.$platform->id.'.jpg')}}" alt="">
                      <div class="container1">
                      <h4>{{$platform->name}}</h4>
                      <p>{{$platform->description}}</p>
@@ -128,7 +128,7 @@
               @foreach ($racings as $racing)
                 <div class="item">
                   <div class="card1">
-                    <img src="{{asset('css/img/index'.$racing->id.'.jpg')}}" alt="">
+                    <img src="{{asset('storage/images/'.$racing->id.'.jpg')}}" alt="">
                      <div class="container1">
                      <h4>{{$racing->name}}</h4>
                      <p>{{$racing->description}}</p>
@@ -155,7 +155,7 @@
               @foreach ($role_playings as $role_playing)
                 <div class="item">
                   <div class="card1">
-                    <img src="{{asset('css/img/index'.$role_playing->id.'.jpg')}}" alt="">
+                    <img src="{{asset('storage/images/'.$role_playing->id.'.jpg')}}" alt="">
                      <div class="container1">
                      <h4>{{$role_playing->name}}</h4>
                      <p>{{$role_playing->description}}</p>
@@ -182,7 +182,7 @@
               @foreach ($shooters as $shooter)
                 <div class="item">
                   <div class="card1">
-                    <img src="{{asset('css/img/index'.$shooter->id.'.jpg')}}" alt="">
+                    <img src="{{asset('storage/images/'.$shooter->id.'.jpg')}}" alt="">
                      <div class="container1">
                      <h4>{{$shooter->name}}</h4>
                      <p>{{$shooter->description}}</p>
@@ -209,7 +209,7 @@
               @foreach ($simulations as $simulation)
                 <div class="item">
                   <div class="card1">
-                    <img src="{{asset('css/img/index'.$simulation->id.'.jpg')}}" alt="">
+                    <img src="{{asset('storage/images/'.$simulation->id.'.jpg')}}" alt="">
                      <div class="container1">
                      <h4>{{$simulation->name}}</h4>
                      <p>{{$simulation->description}}</p>
@@ -236,7 +236,7 @@
               @foreach ($sports as $sport)
                 <div class="item">
                   <div class="card1">
-                    <img src="{{asset('css/img/index'.$sport->id.'.jpg')}}" alt="">
+                    <img src="{{asset('storage/images/'.$sport->id.'.jpg')}}" alt="">
                      <div class="container1">
                      <h4>{{$sport->name}}</h4>
                      <p>{{$sport->description}}</p>
@@ -263,7 +263,7 @@
               @foreach ($strategys as $strategy)
                 <div class="item">
                   <div class="card1">
-                    <img src="{{asset('css/img/index'.$strategy->id.'.jpg')}}" alt="">
+                    <img src="{{asset('storage/images/'.$strategy->id.'.jpg')}}" alt="">
                      <div class="container1">
                      <h4>{{$strategy->name}}</h4>
                      <p>{{$strategy->description}}</p>
@@ -290,7 +290,7 @@
               @foreach ($miscs as $misc)
                 <div class="item">
                   <div class="card1">
-                    <img src="{{asset('css/img/index'.$misc->id.'.jpg')}}" alt="">
+                    <img src="{{asset('storage/images/'.$misc->id.'.jpg')}}" alt="">
                      <div class="container1">
                      <h4>{{$misc->name}}</h4>
                      <p>{{$misc->description}}</p>

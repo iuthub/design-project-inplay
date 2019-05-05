@@ -17,7 +17,8 @@ class IndexController extends Controller
     public function save(Request $request){
 
         $img = \Image::make($request->file('imageUploader'));
-        $img_path= public_path('css\img\index' .request('id'). '.jpg');
+        $img_path= storage_path('app/public/images/' .request('id'). '.jpg');
+        
         $img->resize(900,350);
         $img->save($img_path);
         

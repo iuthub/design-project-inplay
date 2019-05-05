@@ -7,8 +7,10 @@
 
 
   <div class="card mb-3">
-    <img class="card-img-top" src="{{asset('css/img/index'.$product->id.'.jpg')}}" alt="Card image cap">
+    <img class="card-img-top" src="{{asset('storage/images/'.$product->id.'.jpg')}}" alt="Card image cap">
+
     <div class="card-body">
+
       <h3 class="card-title">{{$product->name}}</h3>
       <p class="card-text">Description: {{$product->description}}</p>
       <p class="card-text">Date: {{$product->date}} </p>
